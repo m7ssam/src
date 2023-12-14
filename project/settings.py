@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "import_export", #3
     "simple_history", #4
     "django_filters", #5
-
+    "home.apps.HomeConfig", ## main app
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
