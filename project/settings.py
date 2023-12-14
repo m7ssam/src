@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "simple_history", #4
     "django_filters", #5
     "home.apps.HomeConfig", ## main app
+    "tests.apps.TestsConfig", ## Most important app for testing before deployment
+
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
@@ -85,12 +87,35 @@ WSGI_APPLICATION = "project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'hossam',
+        'PASSWORD': 'M6ck2s5e',
+        'HOST': 'masterops.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'sslrootcert': 'project\crp\call.pem',  # SSL certificate file!!!
+        },
     }
 }
+
+
+
+
+
+
+
 
 
 # Password validation
