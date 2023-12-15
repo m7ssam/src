@@ -1,0 +1,26 @@
+{% extends "generic_index.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div class="wrappermax">
+        <a href="/">
+        <div class="logo">
+            <img src='{% static "images/main/logo.png" %}' alt="PetroJet Logo">
+        </div>
+        </a>
+        <div class="text-center mt-4 name">
+            PetroJet
+        </div>
+        <form method = "post">
+            {% csrf_token %}
+            {{form|crispy}}
+        <button type="submit" class="btn">Register</button>
+        </form>
+        <div class="text-center fs-5 mt-2 mb-2">
+            <a href="{% url  'login' %}">Have an account</a>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            !! Please contact the admin to Activate the User
+        </div>
+    </div>
+{% endblock content %}

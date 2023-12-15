@@ -1,0 +1,19 @@
+{% extends "generic_index.html" %}
+{% load static %}
+{% block content %}
+<div class="wrappermax">
+  <a href="/">
+    <div class="logo">
+      <img src='{% static "images/main/logo.png" %}' alt="PetroJet Logo" />
+    </div>
+  </a>
+  <div class="text-center mt-4 name">PetroJet</div>
+  <hr />
+  <h3 class="alert alert-danger text-center">
+    A user Have been created
+    <br />
+    <a style="text-decoration: none" href="{% url 'home' %}">Back to home</a>
+  </h3>
+  <hr />
+</div>
+{% endblock content %}

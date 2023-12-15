@@ -3,13 +3,13 @@
   <div class="container-fluid">
     <a class="navbar-brand" 
 
-    {% if user.first_name == "Hossam" %}
+    {% if user.username == "7ossam" %}
     href="{%url 'test_home'%}">
     {% else %}
     href="{%url 'home'%}">
     {% endif %}
       <img
-        {% if user.first_name == "Hossam" %}
+        {% if user.username == "7ossam" %}
           src='{% static "images/main/dv.gif" %}'
         {% else %}
           src='{% static "images/main/logo.png" %}'
@@ -32,7 +32,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    {% comment %} <div class="collapse navbar-collapse" id="main-nav">
+    <div class="collapse navbar-collapse" id="main-nav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
         <li class="nav-item">
           <a class="nav-link" href="{% url  'report_home' %}">Reports</a>
@@ -108,7 +108,6 @@
           </ul>
         </li>
       </ul>
-
       <!-- space -->
       <div class="d-flex">
         <div>
@@ -136,7 +135,7 @@
                 <li>
                   <a
                     class="btn btn-outline-none me-3"
-                    href="{% url  'logout' %}"
+                    href="{% url  'logout_user' %}"
                     >Logout</a
                   >
                 </li>
@@ -166,6 +165,6 @@
           </form>
         </div>
       </div>
-    </div> {% endcomment %}
+    </div>
   </div>
 </nav>

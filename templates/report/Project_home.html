@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<div class="container br d-flex  card mt-4 p-4">
+    <div class="row justify-content-evenly" >
+          <div class="card br m-2  card text-center mb-3" style="width: 18rem;">
+            <img src='{% static "images/defaults/C53003.jpg" %}' class="card-img-top br mt-3" alt=""> 
+            <div class="card-body">
+              <div dir = "auto" class="d-flex justify-content-between">
+                <h5 class="card-title">وحدة الصرف الصناعى</h5>
+                <p class="card-text">C53003</p>
+              </div>
+              <a href="{% url  'project_report' %}" class="btn btn-primary mt-3">Open Report</a>
+            </div>
+          </div>
+          <div class="card br m-2  card text-center mb-3" style="width: 18rem;">
+            <img src='{% static "images/defaults/CC2001.jpg" %}' class="card-img-top br mt-3" alt="">
+            <div class="card-body">
+              <div dir = "auto" class="d-flex justify-content-between">
+                <h5 class="card-title">مجمع الاسمدة الازوتية</h5>
+                <p class="card-text">CC2001</p>
+              </div>
+              <a href="#" class="btn btn-secondary mt-3 disabled">Open Report</a>
+            </div>
+          </div>
+          <div class="card br m-2  card text-center mb-3" style="width: 18rem;">
+            <img src='{% static "images/defaults/CP2011.jpg" %}' class="card-img-top br mt-3" alt="">
+            <div class="card-body">
+              <div dir = "auto" class="d-flex justify-content-between">
+                <h5 class="card-title">مجمع التفحيم</h5>
+                <p class="card-text">CP2011</p>
+              </div>
+              <a href="#" class="btn btn-secondary mt-3 disabled">Open Report</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+{% endblock  %}

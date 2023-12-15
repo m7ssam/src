@@ -1,0 +1,20 @@
+{% extends "generic_index.html" %}
+{% block content %}
+{% load static %}
+    <div class="wrappermax">
+        <a href="/">
+        <div class="logo">
+            <img src='{% static "images/main/logo.png" %}' alt="PetroJet Logo">
+        </div>
+        </a>
+        <div class="text-center mt-4 name">
+            PetroJet
+        </div>
+        <hr>
+        <h3 class="alert alert-danger text-center">The user already exist
+            <br>
+            <a style="text-decoration: none" href="mailto:Hossam.dm@outlook.com">contact the admin</a>
+        </h3>
+        <hr>
+    </div>
+{% endblock content %}

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "jazzmin", #1
+    "accounts.apps.AccountsConfig", ## account app must be here to prevent admin confliect
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -45,6 +46,9 @@ INSTALLED_APPS = [
     "simple_history", #4
     "django_filters", #5
     "home.apps.HomeConfig", ## main app
+    "manpower.apps.ManpowerConfig", ## ادارة الموارد البشرية
+    "plan.apps.PlanConfig", ## ادارة التخطيط
+    "report.apps.ReportConfig", ## ادارة التخطيط مويول التقارير
     "tests.apps.TestsConfig", ## Most important app for testing before deployment
 
 ]
@@ -168,15 +172,15 @@ MEDIA_URL = "media/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-# LOGIN_URL = '/users/login/'
-# LOGIN_REDIRECT_URL = '/'
-# LOGOUT_REDIRECT_URL = '/users/login/'
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # for editing the admin logo later
 JAZZMIN_SETTINGS = {
     "show_version": False,
     "copyright": "Hossam Ltd",
-    "site_logo": "images/dv.gif",
+    "site_logo": "images/main/dv.gif",
 }
 
 INTERNAL_IPS = [
