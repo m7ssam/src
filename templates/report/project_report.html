@@ -140,11 +140,11 @@
           <h5 class="ps-3 mb-0">0 دولار</h5>
           <h6>البرنامج الزمنى</h6>
           <h5 class="ps-3 text-center">
-            12-10-2022 <i class="fa-solid fa-arrow-right"></i> 25-11-2023
+            12-10-2022 <i class="fa-solid fa-arrow-left"></i> 25-11-2023
           </h5>
           <h6>البرنامج الزمنى المعدل</h6>
           <h5 class="ps-3 text-center">
-            12-10-2022 <i class="fa-solid fa-arrow-right"></i> 30-04-2024
+            12-10-2022 <i class="fa-solid fa-arrow-left"></i> 30-04-2024
           </h5>
           <hr />
           <table class="table table-hover responsive">
@@ -420,7 +420,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="#" class="btn btn-primary m-2">الجدول الزمنى</a>
+                  <a href="#" class="btn btn-primary m-2 disabled">الجدول الزمنى</a>
                   <div dir = "ltr" class="card-footer mb-0 pb-0">
                     <small class="text-body-secondary mb-0 pb-0"
                       >Last updated 3 mins ago</small
@@ -465,7 +465,7 @@
                     </div>
                   </div>
                   <a
-                    href="UnderConstruction.html"
+                    href="{% url 'underconstruction' %}"
                     class="btn btn-outline-secondary m-2"
                     disabled
                     >Control Sheet</a
@@ -484,7 +484,7 @@
           <div class="mt-3">
             <div class="mt-3">
               <div class="d-grid gap-2 d-md-block text-center">
-                <a href="#" class="btn btn-primary" type="button">موقف الايرادات</a>
+                <a href="#" class="btn btn-primary disabled" type="button" >موقف الايرادات</a>
                 <a href="{% url  'project_contract' %}" class="btn btn-primary" type="button">العقد</a>
               </div>
               <table class="table table-hover responsive mb-2">
@@ -1441,9 +1441,9 @@
                       <td data-label="Activity" class="sec text-center">حفر</td>
                       <td data-label="Sub." scope="row">بنتونيت</td>
                       <td data-label="Unit" scope="row">عدد</td>
-                      <td data-label="Total" scope="row">374</td>
-                      <td data-label="Plan" scope="row">374</td>
-                      <td data-label="Actual" scope="row">374</td>
+                      <td data-label="Total" scope="row">120</td>
+                      <td data-label="Plan" scope="row">120</td>
+                      <td data-label="Actual" scope="row">120</td>
                       <td data-label="Plan %" scope="row">100%</td>
                       <td data-label="Remaining" scope="row">0</td>
                       <td data-label="Done in Week" scope="row">0</td>
@@ -1458,9 +1458,9 @@
                       <td data-label="Activity" class="sec text-center">حفر</td>
                       <td data-label="Sub." scope="row">خرسانة</td>
                       <td data-label="Unit" scope="row">عدد</td>
-                      <td data-label="Total" scope="row">374</td>
-                      <td data-label="Plan" scope="row">374</td>
-                      <td data-label="Actual" scope="row">374</td>
+                      <td data-label="Total" scope="row">120</td>
+                      <td data-label="Plan" scope="row">120</td>
+                      <td data-label="Actual" scope="row">120</td>
                       <td data-label="Plan %" scope="row">100%</td>
                       <td data-label="Remaining" scope="row">0</td>
                       <td data-label="Done in Week" scope="row">0</td>
@@ -1475,9 +1475,9 @@
                       <td data-label="Activity" class="sec text-center">حفر</td>
                       <td data-label="Sub." scope="row">تربة رملية</td>
                       <td data-label="Unit" scope="row">m<sup>3</sup></td>
-                      <td data-label="Total" scope="row">14,350</td>
-                      <td data-label="Plan" scope="row">14,350</td>
-                      <td data-label="Actual" scope="row">14,350</td>
+                      <td data-label="Total" scope="row">11,000</td>
+                      <td data-label="Plan" scope="row">11,000</td>
+                      <td data-label="Actual" scope="row">11,000</td>
                       <td data-label="Plan %" scope="row">100%</td>
                       <td data-label="Remaining" scope="row">0</td>
                       <td data-label="Done in Week" scope="row">0</td>
@@ -1494,9 +1494,9 @@
                       </td>
                       <td data-label="Sub." scope="row">-</td>
                       <td data-label="Unit" scope="row">m<sup>3</sup></td>
-                      <td data-label="Total" scope="row">10,900</td>
-                      <td data-label="Plan" scope="row">10,900</td>
-                      <td data-label="Actual" scope="row">10,900</td>
+                      <td data-label="Total" scope="row">9,000</td>
+                      <td data-label="Plan" scope="row">9,000</td>
+                      <td data-label="Actual" scope="row">9,000</td>
                       <td data-label="Plan %" scope="row">100%</td>
                       <td data-label="Remaining" scope="row">0</td>
                       <td data-label="Done in Week" scope="row">0</td>

@@ -2,9 +2,19 @@
 {% load static %}
 {% block content %}
 <div class=" container d-flex card mt-4 p-4 br">
+    <div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Disclaimer: System Under Development!</strong> <br> This system is currently in the development phase and is not intended for use in any live or critical work environments. It is provided solely for testing, evaluation, and feedback purposes. Any data entered into or processed by this system may be subject to loss, errors, or other unpredictable outcomes.
+            <br>
+            <strong>The Admin</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    </div>
     <h1>PetroJet Eastern branch</h1>
     <img style="width: 350px;" src="{% static 'images\main\planning.webp' %}" alt="">
+    <div>
+        
+    </div>
 </div>
-
 
 {% endblock  %}

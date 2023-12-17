@@ -1,0 +1,276 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container br d-flex card mt-4 p-4">
+  <h1 class="text-center bold mt-3 mb-0">
+    ادارة التخطيط بالفرع الشرقى
+  </h1>
+  <hr />
+  <h2 dir="rtl"> ادارة التخطيط على مستوى الفرع </h2>
+  <div class="row justify-content-evenly">
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">قائمة المشروعات</h3>
+        </div>
+        <a href="{% url  'project_list' %}" class="btn btn-primary"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Controlsheet</h3>
+        </div>
+        <a 
+        {% comment %} href="{% url  'mp_move' %}"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">الجدول الزمنى العام</h3>
+        </div>
+        <a 
+        {% comment %} href="{% url  'mp_move' %}"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">الجدول الزمنى للمشروع</h3>
+        </div>
+        <a 
+        {% comment %} href="{% url  'mp_move' %}"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">خطة الاحتياجات</h3>
+        </div>
+        <a 
+        {% comment %} href="{% url  'mphistory' %}"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">خطة الايرادات</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">نسب الاستفادة عمالة/معدات</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">التدفق النقدى</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">بيان المؤجر عمالة/معدات</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- --------------- -->
+    <hr>
+    <h3 dir="rtl"> ادارة التخطيط على مستوى المشروع </h3>
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Timeline and Deadline Alerts</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Project Dashboard</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Project Management</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Resource Management</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Document Management</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Communication Tools</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Budgeting and Cost Tracking</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Risk Management</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Reporting and Analytics</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Permissions</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+    <!-- --------------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">Client Collaboration</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >OPEN</a
+        >
+      </div>
+    </div>
+    <!-- ------------ -->
+  </div>
+</div>
+
+{% endblock %}

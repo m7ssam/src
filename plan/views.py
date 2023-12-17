@@ -3,10 +3,17 @@ from .models import Project
 from .forms import PostProject
 from django.contrib.auth.decorators import login_required
 @login_required()
+def projects(request):
+  name = Project.objects.all()
+  context = {"name": name}
+  return render(request, 'plan/projects_list.html',context )
+
+
+@login_required()
 def home(request):
   name = Project.objects.all()
   context = {"name": name}
-  return render(request, 'project/home.html',context )
+  return render(request, 'plan/plan_home.html',context )
 
 
 @login_required()

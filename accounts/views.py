@@ -9,6 +9,10 @@ from django import forms
 from django.views import View
 from manpower.models import Mp_list
 from django.contrib.auth.decorators import login_required
+# from .forms import CustomAuthenticationForm
+# from django.contrib.auth.views import LoginView
+# from django.urls import reverse_lazy
+# from django.views.generic import FormView
 
 def sign_up(request):
     if request.method == "POST":
@@ -32,11 +36,26 @@ def sign_up(request):
                 except IntegrityError:
                   return redirect("/accounts/dublication")
             else:
-                # Redirect the user to the login page
                 return redirect("/accounts/invalid_user")  
     else:
         form = RegisterForm()
     return render(request, "registration/sign_up.html", {"form": form})
+
+
+
+# class CustomLoginView(LoginView):
+#     template_name = 'login.html'  
+#     authentication_form = CustomAuthenticationForm
+#     success_url = reverse_lazy('success_url_name')
+
+# class CustomLoginViewWithExtraContext(FormView):
+#     template_name = 'login.html'
+#     form_class = CustomAuthenticationForm
+#     success_url = reverse_lazy('success_url_name')
+#     def form_valid(self, form):
+#         return super().form_valid(form)
+
+
 
 def logout_user(request):
   logout(request)

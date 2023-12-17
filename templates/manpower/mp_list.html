@@ -8,12 +8,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
 <div class="offcanvas-body">
-    <form method = "get">
-        <hr>
-        {{mp_list_filter.form|crispy}}
-        <hr>
-    <button type="submit" class="btn btn-primary fs-5 fw-semibold">Submit</button>
-    </form>
+        <form method = "get" action="{% url 'mp_search_list' %}">
+            {% csrf_token %}
+            {{filter.form|crispy}}
+        <button type="submit" class="btn btn-succress">Filter</button>
+        </form>
     </div>
 </div>
 </div>
@@ -24,7 +23,6 @@
             قائمة العاملين بالشركة
           </h1>
           <hr>
-          <h5 class="text-center bold">يتم اظهار 500 اسم فقط نظراً لكبر حجم قاعدة البيانات</h5>
           <h6 class="text-center bold">استخدم الفلتر لاظهار نتائج اكثر دقة</h6>
           <h6 class="text-center bold">اضغط على الرقم المالى لاظهار بيانات العامل</h6>
           <!-- head f-->
@@ -50,7 +48,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for row in mp_list|slice:':500' %}
+                {% for row in mp_list %}
                     {% with counter=forloop.counter %}
                     <tr class="dh fs-5">
                         <td><div>{{ counter }}</div></td>
@@ -66,6 +64,33 @@
                 {% endfor %}
             </tbody>
         </table>
+        <!-- Pagenation -->
+        {% if mp_list.has_other_pages  %}
+        <nav aria-label="Page navigation example w-50 d-flex justify-content-between mt-3">
+            <ul class="pagination justify-content-center flex-wrap">
+                {% if mp_list.has_previous  %}                  
+                <li class="page-item mt-1">
+                    <a class="page-link" href="?page={{mp_list.previous_page_number}}">Previous</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled mt-1">
+                    <a class="page-link">Previous</a>
+                </li>
+                {% endif %}
+
+                {% for i in mp_list.paginator.page_range %}
+                <li class="page-item mt-1"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                {% endfor %}
+                
+                {% if mp_list.has_next  %}  
+                <li class="page-item mt-1">
+                    <a class="page-link" href="?page={{mp_list.next_page_number}}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+          </nav>
+          {% endif %}
+        <!-- --------- -->
     </div>
 </div>
 {% endblock  %}

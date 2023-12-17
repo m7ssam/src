@@ -72,6 +72,11 @@ class Mp_list(models.Model):
   list_filter = []
   class Meta:
     ordering = ['id']
+    indexes = [
+    models.Index(fields=['id']),
+    models.Index(fields=['first_name']),
+    models.Index(fields=['last_name']),
+    ]
   def __str__(self):
       return f"{self.id} | {self.first_name}  {self.last_name}"
 

@@ -10,7 +10,8 @@
   </a>
   <div class="text-center mt-4 name">PetroJet</div>
   <form method="post">
-    {% csrf_token %}{{form|crispy}}
+    {% csrf_token %}
+    {{form|crispy}}
     <button type="submit" class="btn">login</button>
   </form>
   <div class="text-center fs-5 mt-4">

@@ -10,43 +10,121 @@
     <div class="card text-center br m-2" style="width: 18rem">
       <div class="card-body">
         <div dir="rtl" class="">
-          <h3 class="card-title">قائمة العاملين</h3>
+          <h3 class="card-title">بيانات العاملين</h3>
         </div>
-        <a href="{% url  'mp_list' %}" class="btn btn-primary"
-          >OPEN</a
-        >
+        <!-- ------------ -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Employee Information
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 dir="rtl" class="modal-title fs-5" id="exampleModalLabel">انت تحاول الوصول الى نتائج مشفرة</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body"><strong class="">
+                يتم استخدام نظام تشفير لحماية بيانات العاملين <br>
+                هذا قد يؤدى الى تاخر ظهور بعض النتائج <br>
+                ينصح باستخدام البحث
+              </strong>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{% url  'mp_search' %}" class="btn btn-success">
+                  استخدام البحث
+                </a>
+                <a href="{% url  'mp_list' %}" class="btn btn-danger">
+                  Open database {NOT Recommended}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------- -->
       </div>
     </div>
+    <!-- ---------- -->
     <div class="card text-center br m-2" style="width: 18rem">
       <div class="card-body">
         <div dir="rtl" class="">
           <h3 class="card-title">اصدار قرار نقل</h3>
         </div>
-        <a href="{% url  'mp_move' %}" class="btn btn-primary"
-          >OPEN</a
+        <a 
+        href="{% url  'manpower_test_move' %}"
+        class="btn btn-primary"
+          >Project Assignment</a
         >
       </div>
     </div>
+    <!-- ---------- -->
     <div class="card text-center br m-2" style="width: 18rem">
       <div class="card-body">
         <div dir="rtl" class="">
-          <h3 class="card-title">بيان عدم التنفيذ</h3>
+          <h3 class="card-title">قرارات النقل</h3>
         </div>
-        <a href="{% url  'mphistory' %}" class="btn btn-primary"
-          >OPEN</a
+        <a
+        href="{% url  'mp_move_list' %}"
+        class="btn btn-primary"
+          >Assignment List</a
         >
       </div>
     </div>
+    <!-- ---------- -->
     <div class="card text-center br m-2" style="width: 18rem">
       <div class="card-body">
         <div dir="rtl" class="">
-          <h3 class="card-title">تعديل/ حذف قرار نقل</h3>
+          <h3 class="card-title">توزيع العاملين</h3>
         </div>
-        <a href="#" class="btn btn-primary disabled"
-          >OPEN</a
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >Job Position and Role</a
         >
       </div>
     </div>
+    <!-- ---------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">جدول الاجازات</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >Schedule Management</a
+        >
+      </div>
+    </div>
+    <!-- ---------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">حساب الكفاءة للعامل</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >KPI Management</a
+        >
+      </div>
+    </div>
+    <!-- ---------- -->
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">سجل تدريب العاملين</h3>
+        </div>
+        <a 
+        {% comment %} href="#"  {% endcomment %}
+        class="btn btn-primary disabled"
+          >Training</a
+        >
+      </div>
+    </div>
+    
   </div>
 </div>
 

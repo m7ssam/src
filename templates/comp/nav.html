@@ -62,42 +62,42 @@
               <a class="dropdown-item" href="{% url  'mp_home' %}">Man-Power</a>
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Main schedule</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Engineering</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Procurement</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Construction</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >DCC</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >QC</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Safety</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url  'underconstruction' %}"
+              <a class="dropdown-item disabled" href="{% url  'underconstruction' %}"
                 >Security</a
               >
             </li>
@@ -114,7 +114,7 @@
           {% if user.is_authenticated %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
             <!-- Drop-down -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown d-flex">
               <a
                 class="nav-link dropdown-toggle"
                 href="{% url  'underconstruction' %}"

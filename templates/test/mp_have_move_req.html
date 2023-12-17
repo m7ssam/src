@@ -1,0 +1,16 @@
+{% extends "generic_index_full.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div class="wrapper">
+        <a href="/">
+        <div class="logo">
+            <img src='{% static "images/main/logo.png" %}' alt="PetroJet Logo">
+        </div>
+        </a>
+        <div class="text-center m-4 name">
+            PetroJet
+        </div>
+        <h2>Somthing went Wrong</h2>
+    </div>
+{% endblock content %}

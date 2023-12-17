@@ -12,3 +12,7 @@ urlpatterns = [
         path('dublication', views.dublication, name = 'dublication'),
         path('password_change', views.password_change, name = 'password_change'),
 ]
+
+
+
+        # path('login/', views.CustomLoginView.as_view(), name='login'),
