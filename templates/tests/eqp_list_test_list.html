@@ -1,0 +1,81 @@
+{% extends "index.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class = "container card br mt-4 d-flex overflow-x-auto">
+        <!-- head s-->
+        <h1 class="text-center bold mt-3 mb-0">
+            المعدات العاملة بالفرع الشرقى
+          </h1>
+          <hr>
+          <!-- head f-->
+    <div class = "p-3">
+        <table class="table table-responsive" 
+            id = "dt"
+        >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>كود</th>
+                    <th>المعدة</th>
+                    <th>القدرة</th>
+                    <th>المشروع</th>
+                    <th>Recipient</th>
+                    <th>كفاءة المعدة</th>
+                    <th>العطل</th>
+                    <th>العمل</th>
+                    <th>القيمة</th>
+                    <th>القسم</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in object_list %}
+                {% with counter=forloop.counter %}
+                <tr class="dh fs-5">
+                    <td><div>{{ counter }}</div></td>
+                    <td>{{ row.equn }}</td>
+                    <td><strong>{{ row.type }}</strong></td>
+                    <td>{{ row.capacity }}</td>
+                    <td>{{ row.project }}</td>
+                    <td>{{ row.recipient }}</td>
+                    <td>{{ row.efficiency|floatformat:2 }}%</td>
+                    <td>{{ row.fail }}</td>
+                    <td>{{ row.work }}</td>
+                    <td>{{ row.rate }}</td>
+                    <td>{{ row.dep }}</td>
+                </tr>
+                {% endwith %}
+                {% endfor %}
+            </tbody>            
+        </table>
+        <!-- Pagenation -->
+        {% if mp_list.has_other_pages  %}
+        <nav aria-label="Page navigation example w-50 d-flex justify-content-between mt-3">
+            <ul class="pagination justify-content-center flex-wrap">
+                {% if mp_list.has_previous  %}                  
+                <li class="page-item mt-1">
+                    <a class="page-link" href="?page={{mp_list.previous_page_number}}">Previous</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled mt-1">
+                    <a class="page-link">Previous</a>
+                </li>
+                {% endif %}
+
+                {% for i in mp_list.paginator.page_range %}
+                <li class="page-item mt-1"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                {% endfor %}
+                
+                {% if mp_list.has_next  %}  
+                <li class="page-item mt-1">
+                    <a class="page-link" href="?page={{mp_list.next_page_number}}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+          </nav>
+          {% endif %}
+        <!-- --------- -->
+    </div>
+</div>
+{% endblock  %}

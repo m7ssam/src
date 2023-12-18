@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "manpower.apps.ManpowerConfig", ## ادارة الموارد البشرية
     "plan.apps.PlanConfig", ## ادارة التخطيط
     "report.apps.ReportConfig", ## ادارة التخطيط مويول التقارير
+    "eqp.apps.EqpConfig", ## ادارة التخطيط مويول التقارير
     "tests.apps.TestsConfig", ## Most important app for testing before deployment
 
 ]

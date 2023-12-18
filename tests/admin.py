@@ -15,3 +15,7 @@ class Mp_location_test_import_export(ImportExportModelAdmin):
 @admin.register(client_name_test)
 class client_name_test_import_export(ImportExportModelAdmin):
   pass
+
+@admin.register(Eqp_list_test)
+class Eqp_list_test_import_export(ImportExportModelAdmin):
+  pass

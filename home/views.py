@@ -7,8 +7,8 @@ def home(request):
 
 
 @login_required()
-def Documentation(request):
-  return render(request, 'home/Documentation.html')
+def documentation(request):
+  return render(request, 'home/documentation.html')
 
 
 @login_required()
