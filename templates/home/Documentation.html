@@ -4,644 +4,1127 @@
 <div class="container d-flex card mt-4 p-4 br">
     <div class="text-center" ><img style="width: 350px;" src="{% static 'images\main\planning.webp' %}" alt=""></div>
     <h1 class="text-center" style="font-size: 177px;"> O P S </h1><span>by Hossam</span>
+    <div class="text-center"><a href="{% url 'documentation_ar' %}" class="btn btn-primary w-25 p-3"><h4 class=" m-0">التحويل للغة العربية</h4></a></div>
     <h2>PetroJet Eastern branch</h2>
   <h3>
     Operation Planning System <strong>(OPS)</strong>: Streamlining Business Processes
     through Automation
   </h3>
-  <p>
-    In today's fast-paced business environment, efficiency and precision are
-    paramount for success. The Operation Planning System (OPS) is a
-    comprehensive web application designed to revolutionize and automate various
-    aspects of business operations within our company. By integrating modules
-    such as manpower, equipment, document control, planning, technical office,
-    engineering, procurement, security, quality control, safety, operations,
-    reporting, and automation control, OPS aims to enhance collaboration, reduce
-    manual workload, and optimize resource utilization. This paper provides an
-    in-depth overview of the motivation behind creating OPS and a detailed
-    description of each module.
-  </p>
-  <ol>
-    <li>Introduction:</li>
-    <p>
-      The Operation Planning System (OPS) is developed to address the challenges
-      posed by manual and time-consuming processes in our company. The primary
-      goal is to streamline operations, improve decision-making, and boost overall
-      productivity. OPS is built on a foundation of high-level security features
-      and a robust PostgreSQL database management system, ensuring the
-      confidentiality, integrity, and availability of sensitive information.
+  <style type="text/css">
+    .awlist1 { list-style:none; counter-reset:awlistcounter16_0 }
+    .awlist1 > li:before { content:counter(awlistcounter16_0) '.'; counter-increment:awlistcounter16_0 }
+    .awlist2 { list-style:none; counter-reset:awlistcounter16_1 }
+    .awlist2 > li:before { content:counter(awlistcounter16_0) '.' counter(awlistcounter16_1) '.'; counter-increment:awlistcounter16_1 }
+    .awlist3 { list-style:none; counter-reset:awlistcounter16_2 }
+    .awlist3 > li:before { content:counter(awlistcounter16_0) '.' counter(awlistcounter16_1) '.' counter(awlistcounter16_2) '.'; counter-increment:awlistcounter16_2 }
+    .awlist4 { list-style:none; counter-reset:awlistcounter17_0 }
+    .awlist4 > li:before { content:counter(awlistcounter17_0) '.'; counter-increment:awlistcounter17_0 }
+    .awlist5 { list-style:none; counter-reset:awlistcounter17_1 }
+    .awlist5 > li:before { content:counter(awlistcounter17_0) '.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist6 { list-style:none; counter-reset:awlistcounter17_1 1 }
+    .awlist6 > li:before { content:'1.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist7 { list-style:none; counter-reset:awlistcounter17_1 2 }
+    .awlist7 > li:before { content:'1.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist8 { list-style:none; counter-reset:awlistcounter17_0 1 }
+    .awlist8 > li:before { content:counter(awlistcounter17_0) '.'; counter-increment:awlistcounter17_0 }
+    .awlist9 { list-style:none; counter-reset:awlistcounter17_1 }
+    .awlist9 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist10 { list-style:none; counter-reset:awlistcounter17_2 }
+    .awlist10 > li:before { content:'2.' counter(awlistcounter17_1) '.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist11 { list-style:none; counter-reset:awlistcounter17_2 1 }
+    .awlist11 > li:before { content:'2.1.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist12 { list-style:none; counter-reset:awlistcounter17_1 1 }
+    .awlist12 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist13 { list-style:none; counter-reset:awlistcounter17_2 }
+    .awlist13 > li:before { content:'2.2.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist14 { list-style:none; counter-reset:awlistcounter17_1 2 }
+    .awlist14 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist15 { list-style:none; counter-reset:awlistcounter17_1 3 }
+    .awlist15 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist16 { list-style:none; counter-reset:awlistcounter17_1 4 }
+    .awlist16 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist17 { list-style:none; counter-reset:awlistcounter17_1 5 }
+    .awlist17 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist18 { list-style:none; counter-reset:awlistcounter17_1 6 }
+    .awlist18 > li:before { content:'2.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist19 { list-style:none; counter-reset:awlistcounter17_0 2 }
+    .awlist19 > li:before { content:counter(awlistcounter17_0) '.'; counter-increment:awlistcounter17_0 }
+    .awlist20 { list-style:none; counter-reset:awlistcounter17_1 1 }
+    .awlist20 > li:before { content:'3.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist21 { list-style:none; counter-reset:awlistcounter17_1 2 }
+    .awlist21 > li:before { content:'3.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist22 { list-style:none; counter-reset:awlistcounter17_1 3 }
+    .awlist22 > li:before { content:'3.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist23 { list-style:none; counter-reset:awlistcounter17_1 4 }
+    .awlist23 > li:before { content:'3.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist24 { list-style:none; counter-reset:awlistcounter17_1 5 }
+    .awlist24 > li:before { content:'3.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist25 { list-style:none; counter-reset:awlistcounter17_0 3 }
+    .awlist25 > li:before { content:counter(awlistcounter17_0) '.'; counter-increment:awlistcounter17_0 }
+    .awlist26 { list-style:none; counter-reset:awlistcounter17_2 }
+    .awlist26 > li:before { content:counter(awlistcounter17_0) '.' counter(awlistcounter17_1) '.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist27 { list-style:none; counter-reset:awlistcounter17_2 1 }
+    .awlist27 > li:before { content:'4.1.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist28 { list-style:none; counter-reset:awlistcounter17_2 2 }
+    .awlist28 > li:before { content:'4.1.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist29 { list-style:none; counter-reset:awlistcounter17_1 1 }
+    .awlist29 > li:before { content:'4.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist30 { list-style:none; counter-reset:awlistcounter17_2 }
+    .awlist30 > li:before { content:'4.' counter(awlistcounter17_1) '.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist31 { list-style:none; counter-reset:awlistcounter17_2 1 }
+    .awlist31 > li:before { content:'4.2.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist32 { list-style:none; counter-reset:awlistcounter17_2 2 }
+    .awlist32 > li:before { content:'4.2.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist33 { list-style:none; counter-reset:awlistcounter17_1 2 }
+    .awlist33 > li:before { content:'4.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist34 { list-style:none; counter-reset:awlistcounter17_2 1 }
+    .awlist34 > li:before { content:'4.3.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist35 { list-style:none; counter-reset:awlistcounter17_2 2 }
+    .awlist35 > li:before { content:'4.3.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist36 { list-style:none; counter-reset:awlistcounter17_1 3 }
+    .awlist36 > li:before { content:'4.' counter(awlistcounter17_1) '.'; counter-increment:awlistcounter17_1 }
+    .awlist37 { list-style:none; counter-reset:awlistcounter17_2 1 }
+    .awlist37 > li:before { content:'4.4.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+    .awlist38 { list-style:none; counter-reset:awlistcounter17_2 2 }
+    .awlist38 > li:before { content:'4.4.' counter(awlistcounter17_2) '.'; counter-increment:awlistcounter17_2 }
+  </style>
+  <div>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">Operations Planning System (OPS) Documentation</span>
     </p>
-  </ol>
-  <ol>
-    <li>Motivation:</li>
-    <p>
-      The decision to develop OPS arises from the need to overcome the limitations
-      of traditional methods in managing complex business processes. Manual
-      handling of manpower, equipment, planning, and other critical aspects not
-      only consumes valuable time but also introduces the risk of errors. OPS is
-      conceived to eliminate inefficiencies, enhance communication, and provide
-      real-time insights for informed decision-making.
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">Table of Contents</span>
     </p>
-  </ol>
-  <ol>
-    <li>Module Descriptions:</li>
-    <p>3.1 Manpower Module:</p>
-    <p>
-      The manpower module centralizes employee information, tracks work schedules,
-      and facilitates efficient workforce management. It includes features for
-      attendance tracking, skill assessment, and performance monitoring.
+    <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Introduction</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Purpose</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Scope</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">System Overview</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Architecture and Infrastructure</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Database</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Database Schema</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Data Security</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Modules</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Planning Department</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Human Resources Management</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Equipment Management</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Document Control</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Technical Office Management</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Engineering Management</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Purchasing Department</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Quality Control</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Occupational Safety and Health</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt; list-style-position:inside">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Reporting Program</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt; list-style-position:inside">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Security Records Control System</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt; list-style-position:inside">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Warehouse Control System</span>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">User Guide</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Access and Login</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Navigation</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">User Roles and Permissions</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Data Input and Management</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Reporting</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Troubleshooting</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Module Details</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Planning Department</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Human Resources Management</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Equipment Management</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Document Control</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Technical Office Management</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Engineering Management</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Purchasing Department</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Quality Control</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Occupational Safety and Health</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt; list-style-position:inside">
+            <span style="width:31.22pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Reporting Program</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt; list-style-position:inside">
+            <span style="width:31.22pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Security Records Control System</span>
+            <ol type="1" class="awlist3" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Key Features</span>
+              </li>
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:4.87pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Workflow</span>
+              </li>
+            </ol>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt; list-style-position:inside">
+            <span style="width:31.22pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Storage Control System</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Security Measures</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Authentication</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Authorization</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Data Encryption</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Backup and Recovery</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Integration with Azure Services</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Azure PostgreSQL Database Integration</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Azure Security Best Practices</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Maintenance and Support</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Routine Maintenance</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Issue Resolution</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Upgrades and Updates</span>
+          </li>
+        </ol>
+      </li>
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Appendix</span>
+        <ol type="1" class="awlist2" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Glossary</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">FAQs</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Contact Information</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <br style="page-break-before:always; clear:both" >
+    <ol type="1" class="awlist4" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Introduction</span>
+        <ol type="1" class="awlist5" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Purpose</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">The Operations Planning System (OPS) represents a groundbreaking leap in streamlining and automating the multifaceted operations of our company. With a focus on efficiency and accuracy, OPS is designed to empower our teams and enhance collaboration by seamlessly linking various operational units. This comprehensive web application serves as a centralized hub, bringing together critical modules to revolutionize the way we plan, execute, and manage our day-to-day activities.</span>
     </p>
-    <p>3.2 Equipment Module:</p>
-    <p>
-      This module manages the lifecycle of company assets, ensuring optimal
-      utilization, maintenance, and timely replacements. It provides insights into
-      equipment availability, usage patterns, and maintenance schedules.
+    <ol start="2" type="1" class="awlist6" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Scope</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">In the dynamic landscape of today's fast-paced business environment, the scope of OPS is broad, covering key aspects such as planning, human resources, equipment management, document control, technical office management, engineering management, purchasing, quality control, occupational safety and health, reporting, security records control, and warehouse management. Each module is crafted to address the unique needs of its respective department, contributing to a cohesive and integrated operational ecosystem.</span>
     </p>
-    <p>3.3 Document Control Module:</p>
-    <p>
-      Document control is crucial for compliance and efficient information
-      retrieval. OPS&#39;s document control module organizes, tracks, and controls
-      access to documents, ensuring version control and facilitating
-      collaboration.
+    <ol start="3" type="1" class="awlist7" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">System Overview</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">At the heart of OPS is a robust and secure central database hosted on Azure PostgreSQL. This database serves as the backbone, ensuring seamless data flow and accessibility across all modules. The interconnectivity of these modules fosters real-time collaboration, providing a holistic view of operations while allowing for precise control and management. OPS is not just a tool; it's a strategic asset poised to elevate our operational capabilities, drive efficiency, and contribute to the overall success of our organization.</span>
     </p>
-    <p>3.4 Planning Module:</p>
-    <p>
-      The planning module assists in project scheduling, resource allocation, and
-      task assignment. It enables efficient project management by providing a
-      centralized platform for planning and monitoring progress.
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">&#xa0;</span>
     </p>
-    <p>3.5 Technical Office Module:</p>
-    <p>
-      This module caters to the needs of the technical office, facilitating
-      collaboration among teams involved in technical aspects of projects. It
-      includes features for design documentation, collaboration tools, and version
-      control.
+    <ol start="2" type="1" class="awlist8" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Architecture and Infrastructure</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">The success of the Operations Planning System (OPS) hinges on its robust architecture and well-defined infrastructure. This section provides a detailed overview of the system's structural components.</span>
     </p>
-    <p>3.6 Engineering Department Module:</p>
-    <p>
-      The engineering module focuses on managing engineering tasks, including
-      design reviews, change requests, and collaboration on technical
-      documentation.
+    <ol type="1" class="awlist9" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Database</span>
+        <ol type="1" class="awlist10" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt; font-weight:normal">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Database Schema</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">The OPS relies on a centralized Azure PostgreSQL database to store and manage data across all modules. The database schema is meticulously designed to accommodate the diverse needs of each operational unit. Key entities and relationships include:</span>
     </p>
-    <p>3.7 Procurement Department Module:</p>
-    <p>
-      Efficient procurement is essential for timely project delivery. This module
-      streamlines the procurement process, from requisition to vendor management,
-      ensuring cost-effectiveness and timely deliveries.
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Tables</span></strong><span style="font-family:Constantia">: Representing core data entities such as employees, equipment, documents, and more.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Indexes</span></strong><span style="font-family:Constantia">: Ensuring efficient data retrieval and query optimization.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Foreign Key Constraints</span></strong><span style="font-family:Constantia">: Enforcing referential integrity between related tables.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Views</span></strong><span style="font-family:Constantia">: Offering customized data perspectives for specific reporting requirements.</span>
+        <ol start="2" type="1" class="awlist11" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Data Security</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">To safeguard sensitive information, OPS implements robust data security measures:</span>
     </p>
-    <p>3.8 Security Module:</p>
-    <p>
-      The security module implements robust access controls, encryption, and
-      auditing to safeguard sensitive information within OPS.
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Access Control</span></strong><span style="font-family:Constantia">: Role-based access control (RBAC) is enforced to restrict user access based on their roles within the organization.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Encryption</span></strong><span style="font-family:Constantia">: Data at rest and in transit is encrypted using industry-standard encryption algorithms to prevent unauthorized access.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Audit Trails</span></strong><span style="font-family:Constantia">: Comprehensive audit trails track changes to the database, providing accountability and transparency.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Regular Security Audits</span></strong><span style="font-family:Constantia">: Periodic security audits are conducted to identify and address potential vulnerabilities.</span>
+        <ol start="2" type="1" class="awlist12" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-57.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Modules</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">Each module within OPS is designed as an independent functional unit, addressing specific aspects of operations within the company.</span>
     </p>
-    <p>3.9 Quality Control Module:</p>
-    <p>
-      This module monitors and ensures the quality of deliverables through
-      inspections, audits, and quality assurance processes.
+    <ol type="1" class="awlist13" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:61.2pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Planning Department</span>
+      </li>
+    </ol>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Objectives and Functions</span></strong>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:97.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Planning Department module aims to streamline the planning processes, including project scheduling, resource allocation, and task prioritization.</span>
     </p>
-    <p>3.10 Safety Module:</p>
-    <p>
-      The safety module promotes a safe working environment by tracking safety
-      incidents, conducting risk assessments, and enforcing safety protocols.
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Key Features</span></strong>
+        <ul type="circle" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:29.6pt; margin-bottom:10pt; padding-left:6.4pt">
+            <span style="font-family:Constantia">Gantt chart-based project timelines.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:29.6pt; margin-bottom:10pt; padding-left:6.4pt">
+            <span style="font-family:Constantia">Resource allocation dashboards.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:29.6pt; margin-bottom:10pt; padding-left:6.4pt">
+            <span style="font-family:Constantia">Real-time collaboration tools.</span>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Workflow</span></strong>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:97.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The workflow begins with project initiation, followed by task assignment, progress tracking, and final project completion.</span>
     </p>
-    <p>3.11 Operations Module:</p>
-    <p>
-      The operations module provides a real-time overview of ongoing projects,
-      enabling quick decision-making and issue resolution.
+    <ol start="3" type="1" class="awlist14" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">User Interface</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">OPS features an intuitive and user-friendly web-based interface, accessible from various devices and browsers. The user interface includes:</span>
     </p>
-    <p>3.12 Reporting Module:</p>
-    <p>
-      The reporting module generates customizable reports, offering insights into
-      various aspects of business operations.
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Dashboards</span></strong><span style="font-family:Constantia">: Offering a consolidated view of critical information and key performance indicators (KPIs).</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Forms and Input Screens</span></strong><span style="font-family:Constantia">: Streamlining data entry with well-designed forms tailored to each module's requirements.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Navigation Menus</span></strong><span style="font-family:Constantia">: Intuitive menus facilitate easy movement between modules and features.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Reporting Interfaces</span></strong><span style="font-family:Constantia">: User-friendly reporting interfaces for generating, customizing, and exporting reports.</span>
+        <ol start="4" type="1" class="awlist15" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Integration with External Services</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">OPS is designed to seamlessly integrate with various external services, enhancing its capabilities:</span>
     </p>
-    <p>3.13 Automation Control Module:</p>
-    <p>
-      The automation control module integrates Python as the calculation engine,
-      allowing for the automation of repetitive tasks and complex calculations.
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Azure Services Integration</span></strong><span style="font-family:Constantia">: Leveraging Azure services for hosting, scalability, and enhanced security.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Third-Party APIs</span></strong><span style="font-family:Constantia">: Integration with external APIs for functionalities such as weather updates, supply chain tracking, and more.</span>
+        <ol start="5" type="1" class="awlist16" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Scalability and Performance</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">OPS is built with scalability in mind, allowing the system to grow and adapt to the evolving needs of the organization. Performance optimization measures include:</span>
     </p>
-  </ol>
-  <hr />
-  <p><strong>Manpower Module</strong></p>
-  <p>
-    The Manpower Module within the Operation Planning System (OPS) serves as a
-    centralized and comprehensive solution for managing the human resources
-    aspect of the organization. This module is designed to streamline the
-    handling of employee-related information, facilitate efficient workforce
-    management, and enhance overall personnel administration.
-  </p>
-  <p><strong>Key Features:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Employee Information Management:</strong></p>
-      <ul>
-        <li>
-          The Manpower Module maintains a centralized database of employee
-          profiles, storing essential information such as personal details,
-          contact information, qualifications, and skills.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Attendance Tracking:</strong></p>
-      <ul>
-        <li>
-          OPS incorporates a robust attendance tracking system to monitor
-          employee presence and absence. This feature includes real-time
-          updates, historical records, and integration with other modules for
-          project planning and resource allocation.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Skill Assessment:</strong></p>
-      <ul>
-        <li>
-          Skill assessment tools allow for the evaluation and documentation of
-          employee skills and competencies. This information aids in resource
-          allocation, project planning, and identifying training needs.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Performance Monitoring:</strong></p>
-      <ul>
-        <li>
-          The module provides a platform for continuous performance monitoring.
-          Key performance indicators (KPIs), goals, and achievements are
-          tracked, facilitating regular performance reviews and goal-setting.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Work Scheduling:</strong></p>
-      <ul>
-        <li>
-          OPS assists in the creation and management of employee work schedules.
-          This feature considers factors such as employee availability, project
-          deadlines, and skill requirements.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Leave Management:</strong></p>
-      <ul>
-        <li>
-          Leave requests, approvals, and balances are seamlessly handled within
-          the module. Automated workflows notify relevant personnel of leave
-          requests, ensuring timely approvals and proper staffing.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Training and Development:</strong></p>
-      <ul>
-        <li>
-          The module includes functionalities for managing employee training and
-          development programs. This encompasses identifying training needs,
-          scheduling sessions, and tracking employee participation.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Communication Tools:</strong></p>
-      <ul>
-        <li>
-          Communication tools facilitate effective interaction among team
-          members and between employees and management. Integrated messaging
-          features ensure quick and secure communication within the
-          organization.
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <p><strong>Benefits:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Efficient Resource Allocation:</strong></p>
-      <ul>
-        <li>
-          By providing a comprehensive overview of employee skills,
-          availability, and performance, the Manpower Module enables efficient
-          resource allocation, ensuring the right personnel for the right tasks.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Improved Decision-Making:</strong></p>
-      <ul>
-        <li>
-          Real-time data on attendance, skills, and performance contribute to
-          informed decision-making, allowing management to respond promptly to
-          operational needs and challenges.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Enhanced Collaboration:</strong></p>
-      <ul>
-        <li>
-          The communication tools foster collaboration among team members,
-          promoting a cohesive and communicative work environment.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Regulatory Compliance:</strong></p>
-      <ul>
-        <li>
-          The module assists in maintaining compliance with labor laws and
-          regulations by automating processes related to leave management,
-          working hours, and employee documentation.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Increased Productivity:</strong></p>
-      <ul>
-        <li>
-          Automation of routine tasks, such as attendance tracking and leave
-          management, reduces administrative burdens, allowing employees and
-          managers to focus on core responsibilities.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Employee Development:</strong></p>
-      <ul>
-        <li>
-          The module supports employee growth by identifying training needs and
-          providing a platform for planning and tracking professional
-          development activities.
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <p>
-    The Manpower Module in OPS not only addresses the fundamental aspects of
-    human resource management but also contributes to the overall efficiency and
-    effectiveness of the organization by aligning workforce capabilities with
-    strategic goals.
-  </p>
-  <hr />
-  <p><strong>Equipment Module</strong></p>
-  <p>
-    The Equipment Module within the Operation Planning System (OPS) is a vital
-    component designed to efficiently manage and optimize the lifecycle of
-    company assets. This comprehensive module provides a centralized platform
-    for tracking, maintaining, and planning the usage of equipment, ensuring
-    that resources are utilized effectively and operational downtime is
-    minimized.
-  </p>
-  <p><strong>Key Features:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Equipment Inventory:</strong></p>
-      <ul>
-        <li>
-          The Equipment Module maintains a detailed inventory of all company
-          assets, including machinery, vehicles, and other equipment. Each entry
-          includes essential information such as specifications, purchase
-          details, and maintenance history.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Asset Tracking:</strong></p>
-      <ul>
-        <li>
-          A robust asset tracking system allows for real-time monitoring of
-          equipment location, status, and usage. This feature is crucial for
-          preventing loss, optimizing deployment, and identifying underutilized
-          assets.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Maintenance Scheduling:</strong></p>
-      <ul>
-        <li>
-          The module incorporates a preventive maintenance scheduling system to
-          ensure timely servicing of equipment. Scheduled maintenance helps
-          reduce the risk of breakdowns, extend equipment lifespan, and improve
-          overall operational reliability.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Usage Analytics:</strong></p>
-      <ul>
-        <li>
-          Analytics tools provide insights into equipment usage patterns,
-          helping organizations make informed decisions about resource
-          allocation, upgrades, or replacements.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Depreciation Tracking:</strong></p>
-      <ul>
-        <li>
-          The module includes features to track the depreciation of assets over
-          time. This information is crucial for financial reporting, budgeting,
-          and determining the optimal time for equipment replacement.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Vendor Management:</strong></p>
-      <ul>
-        <li>
-          OPS facilitates efficient vendor management by recording and tracking
-          interactions with equipment suppliers. This ensures a transparent and
-          accountable procurement process.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Equipment Reservations:</strong></p>
-      <ul>
-        <li>
-          For organizations with shared resources, the module allows for the
-          reservation of equipment. This feature prevents scheduling conflicts
-          and ensures that equipment is available when needed.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Compliance and Certification:</strong></p>
-      <ul>
-        <li>
-          The Equipment Module helps organizations comply with safety and
-          industry standards by tracking equipment certifications, inspections,
-          and ensuring that all assets meet regulatory requirements.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Integration with Other Modules:</strong></p>
-      <ul>
-        <li>
-          Seamless integration with modules such as Planning and Operations
-          ensures that equipment availability aligns with project timelines.
-          This integration contributes to effective resource planning and
-          project execution.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Cost Tracking:</strong></p>
-      <ul>
-        <li>
-          Detailed cost tracking features provide insights into the total cost
-          of ownership for each piece of equipment, including initial purchase
-          costs, maintenance expenses, and depreciation.
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <p><strong>Benefits:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Optimized Resource Utilization:</strong></p>
-      <ul>
-        <li>
-          The Equipment Module enables organizations to optimize resource
-          utilization by providing real-time information on equipment
-          availability, reducing downtime, and preventing overuse or underuse of
-          assets.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Improved Equipment Reliability:</strong></p>
-      <ul>
-        <li>
-          Through preventive maintenance scheduling and usage analytics, the
-          module contributes to improved equipment reliability, reducing the
-          likelihood of unexpected breakdowns and disruptions.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Enhanced Financial Planning:</strong></p>
-      <ul>
-        <li>
-          By tracking depreciation, maintenance costs, and overall equipment
-          expenses, organizations can make informed decisions about budgeting,
-          replacement cycles, and long-term financial planning.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Streamlined Procurement:</strong></p>
-      <ul>
-        <li>
-          Vendor management features streamline the procurement process,
-          ensuring that organizations work with reliable suppliers and obtain
-          the best value for their investments.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Regulatory Compliance:</strong></p>
-      <ul>
-        <li>
-          The module aids in compliance with industry regulations and safety
-          standards by tracking certifications, inspections, and other
-          compliance-related activities.
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <p>
-    The Equipment Module in OPS is a cornerstone for organizations seeking to
-    optimize their asset management processes, enhance operational efficiency,
-    and ensure the longevity and reliability of their equipment assets.
-  </p>
-  <hr />
-  <p><strong>Document Control Module</strong></p>
-  <p>
-    The Document Control Module within the Operation Planning System (OPS) is a
-    sophisticated solution designed to manage, organize, and control the vast
-    array of documents crucial to the functioning of an organization. This
-    module ensures that documents are securely stored, easily accessible, and
-    subject to version control, contributing to improved collaboration,
-    compliance, and overall efficiency in information management.
-  </p>
-  <p><strong>Key Features:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Document Repository:</strong></p>
-      <ul>
-        <li>
-          The Document Control Module serves as a centralized repository for all
-          types of documents, including manuals, reports, specifications, and
-          procedural documents. Documents are categorized and organized for easy
-          retrieval.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Version Control:</strong></p>
-      <ul>
-        <li>
-          Version control features ensure that multiple iterations of a document
-          are tracked, recorded, and easily accessible. Users can review the
-          entire history of a document, including changes made, contributors,
-          and timestamps.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Access Control:</strong></p>
-      <ul>
-        <li>
-          Robust access control mechanisms are in place to regulate who can
-          view, edit, or approve documents. Role-based permissions ensure that
-          sensitive information is only accessible to authorized personnel.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Document Approval Workflow:</strong></p>
-      <ul>
-        <li>
-          The module includes a workflow for document approval, ensuring that
-          critical documents pass through the necessary reviews and approvals
-          before becoming official. This feature promotes accountability and
-          compliance.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Search and Retrieval:</strong></p>
-      <ul>
-        <li>
-          Advanced search functionalities enable users to quickly locate
-          specific documents based on keywords, tags, or metadata. This
-          streamlines information retrieval and enhances overall productivity.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Document Distribution:</strong></p>
-      <ul>
-        <li>
-          The module facilitates the controlled distribution of documents to
-          relevant stakeholders. This ensures that the right individuals receive
-          the right information, reducing the risk of miscommunication.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Electronic Signatures:</strong></p>
-      <ul>
-        <li>
-          Electronic signature capabilities provide a secure and traceable
-          method for approving and validating documents. This feature is
-          particularly useful for regulatory compliance and maintaining an audit
-          trail.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Audit Trail:</strong></p>
-      <ul>
-        <li>
-          An audit trail records all interactions with documents, including
-          views, edits, approvals, and downloads. This feature enhances
-          accountability, facilitates compliance, and provides a complete
-          history of document activities.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Document Lifecycle Management:</strong></p>
-      <ul>
-        <li>
-          The module supports the entire document lifecycle, from creation and
-          editing to approval, distribution, and eventual archival or disposal.
-          This systematic approach ensures that documents are managed
-          efficiently throughout their existence.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Integration with Other Modules:</strong></p>
-      <ul>
-        <li>
-          Integration with other OPS modules, such as Planning and Engineering,
-          ensures that documents are seamlessly linked to relevant projects,
-          tasks, or processes. This integration enhances cross-functional
-          collaboration and data consistency.
-        </li>
-      </ul>
-    </li>
-  </ol>
-  <p><strong>Why Use automation:</strong></p>
-  <ol>
-    <li>
-      <p><strong>Compliance Assurance:</strong></p>
-      <ul>
-        <li>
-          The Document Control Module aids in maintaining compliance with
-          industry standards, regulatory requirements, and internal policies by
-          enforcing controlled document management processes.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Reduced Risk of Errors:</strong></p>
-      <ul>
-        <li>
-          Version control and approval workflows minimize the risk of errors in
-          document content, ensuring that the latest and approved versions are
-          always available for reference.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Enhanced Collaboration:</strong></p>
-      <ul>
-        <li>
-          By providing a centralized repository and efficient access controls,
-          the module fosters collaboration among teams, departments, and
-          external stakeholders, promoting seamless information sharing.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Improved Efficiency:</strong></p>
-      <ul>
-        <li>
-          Streamlined document retrieval, controlled distribution, and automated
-          workflows contribute to increased operational efficiency, reducing the
-          time and effort required for document-related tasks.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Secure Information Management:</strong></p>
-      <ul>
-        <li>
-          Robust security features, including access controls and audit trails,
-          ensure the confidentiality and integrity of sensitive information,
-          protecting the organization from unauthorized access and data
-          breaches.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Facilitated Decision-Making:</strong></p>
-      <ul>
-        <li>
-          Access to up-to-date and approved documents empowers decision-makers
-          with accurate information, supporting informed and timely
-          decision-making processes.
-        </li>
-      </ul>
-    </li>
-  </ol>
-</div>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Caching Mechanisms</span></strong><span style="font-family:Constantia">: Implementing caching strategies to enhance data retrieval speed.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Load Balancing</span></strong><span style="font-family:Constantia">: Distributing incoming network traffic across multiple servers to prevent bottlenecks.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Database Indexing</span></strong><span style="font-family:Constantia">: Optimizing database performance through strategic indexing.</span>
+        <ol start="6" type="1" class="awlist17" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Disaster Recovery and Redundancy</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">To ensure business continuity, OPS incorporates robust disaster recovery and redundancy measures:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Regular Backups</span></strong><span style="font-family:Constantia">: Scheduled backups of the database and system configurations.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Failover Systems</span></strong><span style="font-family:Constantia">: Redundant systems are in place to take over in the event of a primary system failure.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Geographical Redundancy</span></strong><span style="font-family:Constantia">: Utilizing multiple data centers for geographical redundancy and resilience.</span>
+        <ol start="7" type="1" class="awlist18" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Compliance and Regulations</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">OPS adheres to industry-specific regulations and compliance standards:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Data Protection</span></strong><span style="font-family:Constantia">: Compliance with data protection regulations, ensuring the privacy and security of user data.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Audit Trails</span></strong><span style="font-family:Constantia">: Meeting audit requirements through detailed tracking and reporting of system activities.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.66pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Accessibility</span></strong><span style="font-family:Constantia">: Conforming to accessibility standards to ensure inclusivity for users with diverse needs.</span>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:75.6pt; margin-bottom:10pt">
+      <span style="color:#262626">This concludes the overview of the architecture and infrastructure of the Operations Planning System. The subsequent sections of this documentation will delve into specific details related to each module, user guides, security measures, maintenance, and support.</span>
+    </p>
+    <ol start="3" type="1" class="awlist19" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">User Guide</span>
+        <ol type="1" class="awlist5" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Access and Login</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">To access the Operations Planning System (OPS), follow these steps:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Open a web browser and navigate to the OPS URL provided by your IT department.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Enter your username and password on the login page.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Click the "Login" button to access the OPS dashboard.</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:57.6pt; margin-bottom:10pt">
+      <strong><span style="color:#262626">Note !!</span></strong><span style="color:#262626">: Ensure that your login credentials are kept confidential. Contact the system administrator for assistance with login issues.</span>
+    </p>
+    <ol start="2" type="1" class="awlist20" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Navigation</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">Once logged in, familiarize yourself with the OPS interface:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:31.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Dashboard</span></strong><span style="font-family:Constantia">: The home screen provides an overview of the system and quick access to key modules [some features are still under development].</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:31.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Navigation Menu</span></strong><span style="font-family:Constantia">: Use the menu on the left to navigate between modules. Each module is clearly labeled for easy identification [still under development].</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:31.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Module Tabs</span></strong><span style="font-family:Constantia">: Within each module, tabs are organized to streamline navigation. Click on the relevant tab to access specific features and information.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:31.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Search Functionality</span></strong><span style="font-family:Constantia">: Utilize the search bar to quickly locate specific records or information [still under development].</span>
+        <ol start="3" type="1" class="awlist21" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:3.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">User Roles and Permissions</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">OPS has different user roles with specific permissions:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:47.26pt; margin-bottom:10pt; padding-left:6.74pt; color:#262626">
+        <strong>Administrator</strong>: Has access to all modules and can manage user roles and system settings.
+      </li>
+      <li style="margin-top:6pt; margin-left:49.14pt; margin-bottom:10pt; padding-left:4.86pt; color:#262626">
+        <strong>Manager</strong>: Can access and modify data within specific modules relevant to their department.
+      </li>
+      <li style="margin-top:6pt; margin-left:48.84pt; margin-bottom:10pt; padding-left:5.16pt; color:#262626">
+        <strong>User</strong>: Has limited access for data input and retrieval based on their role and responsibilities.
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:54pt; margin-bottom:10pt">
+      <strong><span style="color:#262626">Note</span></strong><span style="color:#262626">!!: Check with your system administrator to determine your role and associated permissions.</span>
+    </p>
+    <ol start="4" type="1" class="awlist22" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Data Input and Management</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">Follow these steps to input and manage data:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:47.26pt; margin-bottom:10pt; padding-left:6.74pt; color:#262626">
+        Data Entry Form: Navigate to the relevant module and locate the data entry form.
+      </li>
+      <li style="margin-top:6pt; margin-left:49.14pt; margin-bottom:10pt; padding-left:4.86pt; color:#262626">
+        Required Fields: Fill in the required fields marked with an asterisk (*). These fields must be completed for successful data entry.
+      </li>
+      <li style="margin-top:6pt; margin-left:48.84pt; margin-bottom:10pt; padding-left:5.16pt; color:#262626">
+        Save and Update: Click the "Save" or "Update" button to save your changes. Ensure all changes are saved before navigating away from the page.
+      </li>
+      <li style="margin-top:6pt; margin-left:49.65pt; margin-bottom:10pt; padding-left:4.35pt; color:#262626">
+        Data Validation: OPS may include data validation checks. Review error messages and correct any issues before saving.
+        <ol start="5" type="1" class="awlist23" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-14.4pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Reporting</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">Generate reports to analyze and present data:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Reporting Module: Navigate to the "Reporting Program" module.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Select Criteria: Choose the criteria for your report, such as date range, department, or specific parameters.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Generate Report: Click the "Generate Report" button to view or download the report.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <span style="font-family:Constantia">Export Options: OPS may provide options to export reports in various formats (e.g., PDF, Excel). Select the desired format.</span>
+        <ol start="6" type="1" class="awlist24" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-18pt; margin-bottom:10pt; text-indent:-21.6pt; font-weight:bold">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Troubleshooting</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt">
+      <span style="color:#262626">If you encounter issues while using OPS, follow these troubleshooting steps:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Check Internet Connection</span></strong><span style="font-family:Constantia">: Ensure you have a stable internet connection.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Clear Browser Cache</span></strong><span style="font-family:Constantia">: Clear your browser cache and try logging in again.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:52.95pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Contact Support</span></strong><span style="font-family:Constantia">: If issues persist, contact the OPS support team or your system administrator for assistance.</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:57.6pt; margin-bottom:10pt">
+      <span style="color:#262626">By following this user guide, you can effectively navigate OPS and leverage its features for improved operational efficiency.</span>
+    </p>
+    <ol start="4" type="1" class="awlist25" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:9.65pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Constantia">Module Details</span>
+        <ol type="1" class="awlist5" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-21.6pt">
+            <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia; font-weight:normal">Planning Department</span>
+            <ol type="1" class="awlist26" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+              <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+                <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <span style="font-family:Constantia">The Planning Department module within OPS serves the following key objectives and functions:</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Project Planning</span></strong><span style="font-family:Constantia">: Enables the creation and management of project plans, including task assignment, timelines, and dependencies.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Resource Allocation</span></strong><span style="font-family:Constantia">: Facilitates the allocation of human and material resources for various projects, optimizing efficiency.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Budget Management</span></strong><span style="font-family:Constantia">: Allows the planning department to create and monitor project budgets, ensuring financial adherence.</span>
+        <ol start="2" type="1" class="awlist27" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-46.8pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Gantt Chart Visualization</span></strong><span style="font-family:Constantia">: Provides a visual representation of project timelines and dependencies through an interactive Gantt chart.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Resource Dashboard</span></strong><span style="font-family:Constantia">: Offers a centralized dashboard for resource managers to view and allocate human and equipment resources.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Budget Tracking</span></strong><span style="font-family:Constantia">: Real-time tracking of project expenses and budgetary allocations to prevent overspending.</span>
+        <ol start="3" type="1" class="awlist28" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-46.8pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Project Creation</span></strong><span style="font-family:Constantia">: Users initiate new projects within the system, providing essential details such as project name, objectives, and initial budget.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Task Assignment</span></strong><span style="font-family:Constantia">: Project managers assign tasks to team members, specifying deadlines and dependencies.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Resource Allocation</span></strong><span style="font-family:Constantia">: The system allows resource managers to allocate human and equipment resources based on project requirements.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Budget Approval</span></strong><span style="font-family:Constantia">: Budget proposals undergo an approval process, ensuring financial compliance.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Gantt Chart Monitoring: </span></strong><span style="font-family:Constantia">Project progress is monitored through the Gantt chart, allowing stakeholders to visualize timelines and identify potential bottlenecks.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Reporting: </span></strong><span style="font-family:Constantia">The module generates reports on project status, resource utilization, and budget adherence for comprehensive analysis.</span>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:108pt; margin-bottom:10pt">
+      <strong><span style="color:#262626">Note!</span></strong><span style="color:#262626">!: This detailed breakdown provides users and administrators with a clear understanding of the Planning Department module, from its overarching objectives to the specific features and workflows. Repeat this structure for each module in your OPS documentation, tailoring the content to reflect the unique objectives and functions of each operational unit.</span>
+    </p>
+    <ol start="2" type="1" class="awlist29" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Human Resources Management</span>
+        <ol type="1" class="awlist30" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia; font-weight:normal">Objectives and Functions</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Human Resources Management module within the Operations Planning System (OPS) is designed to streamline and enhance HR processes within the organization. Key objectives and functions include:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Employee Information Management</span></strong><span style="font-family:Constantia">: Maintain a centralized repository of employee records, including personal details, employment history, and performance evaluations.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Recruitment and Onboarding</span></strong><span style="font-family:Constantia">: Facilitate the recruitment process, from job posting to candidate selection. Additionally, manage the onboarding process to ensure a smooth transition for new hires.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Leave and Attendance Tracking</span></strong><span style="font-family:Constantia">: Enable employees to request and track leaves, while also monitoring attendance to ensure compliance with company policies.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Training and Development</span></strong><span style="font-family:Constantia">: Plan, track, and evaluate employee training programs to enhance skills and knowledge within the organization.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:100.06pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Performance Appraisal</span></strong><span style="font-family:Constantia">: Automate the performance appraisal process, providing a systematic approach to employee evaluations and goal setting.</span>
+        <ol start="2" type="1" class="awlist31" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-46.8pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Key Features</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Employee Self-Service Portal</span></strong><span style="font-family:Constantia">: Empower employees to manage their personal information, request leaves, and access relevant HR resources.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Recruitment Workflow Automation</span></strong><span style="font-family:Constantia">: Streamline the recruitment workflow, from job requisition to candidate selection, reducing manual intervention and enhancing efficiency.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Leave Approval System</span></strong><span style="font-family:Constantia">: Implement a seamless leave approval process, ensuring timely responses and reducing administrative bottlenecks.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">Training Calendar and Evaluation Tools</span></strong><span style="font-family:Constantia">: Maintain a centralized training calendar, allowing employees to enroll in relevant programs. Evaluate training effectiveness through integrated assessment tools.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:89.26pt; margin-bottom:10pt; padding-left:7.94pt; font-family:serif; color:#262626">
+        <strong><span style="font-family:Constantia; ">360-Degree Performance Feedback</span></strong><span style="font-family:Constantia">: Facilitate a comprehensive performance appraisal system that includes feedback from multiple sources, fostering a holistic view of employee performance.</span>
+        <ol start="3" type="1" class="awlist32" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-36pt; margin-bottom:10pt; text-indent:-25.2pt; font-family:'Cambria Math'; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:6pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Human Resources Management module follows a structured workflow to ensure the efficient execution of HR processes:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:85.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="font-family:Constantia">Employee Information Update</span><span style="font-family:Constantia; font-weight:normal">:</span>
+        <ul type="disc" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">HR personnel update employee records regularly, ensuring accuracy and completeness.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Employees can use the self-service portal to update personal information.</span>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top:6pt; margin-left:85.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="font-family:Constantia">Recruitment Process:</span>
+        <ul type="disc" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Job requisitions are raised through the system.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Automated posting on relevant platforms and application tracking.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Shortlisting and interview scheduling within the system.</span>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top:6pt; margin-left:85.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="font-family:Constantia">Leave Request and Approval:</span>
+        <ul type="disc" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Employees submit leave requests through the system.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; font-weight:normal">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Supervisors receive notifications for leave requests and can approve or reject within the system.</span>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top:6pt; margin-left:85.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Training Management</span></strong><span style="font-family:Constantia">:</span>
+        <ul type="disc" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">HR plans and schedules training programs using the centralized calendar.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Employees enroll in training sessions through the self-service portal.</span>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top:6pt; margin-left:85.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Performance Appraisal</span></strong><span style="font-family:Constantia">:</span>
+        <ul type="disc" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">Goal-setting and mid-year reviews are initiated through the system.</span>
+          </li>
+          <li style="margin-top:6pt; margin-left:27.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt">
+            <span style="line-height:110%; font-family:Constantia; font-size:11pt">360-degree feedback is collected and consolidated for the annual performance appraisal.</span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:126pt; margin-bottom:10pt">
+      <span style="color:#262626">Note!!: By adhering to this workflow, the Human Resources Management module ensures a streamlined and transparent HR operation, contributing to the overall success of the Operations Planning System.</span>
+    </p>
+    <ol start="3" type="1" class="awlist33" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Equipment Management</span>
+        <ol type="1" class="awlist30" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; text-indent:-25.2pt">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:0pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Equipment Management module within the Operations Planning System (OPS) is designed to streamline and optimize the management of all equipment utilized within the organization. The primary objectives and functions of this module are as follows:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Asset Tracking</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Enable the systematic tracking of all equipment, including their locations, usage history, and status.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Maintenance Scheduling</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Facilitate the scheduling of routine maintenance activities to ensure the optimal performance and longevity of equipment.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Utilization Monitoring</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Track the utilization patterns of equipment to identify opportunities for efficiency improvement or potential replacements.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Cost Management</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Provide tools to manage the costs associated with equipment, including maintenance expenses, depreciation, and potential procurement.</span>
+        <ol start="2" type="1" class="awlist34" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-10.8pt; text-indent:-25.2pt; line-height:110%; font-family:'Cambria Math'; font-size:11pt; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">&#xa0;</span><span style="font-family:Constantia">Key Features</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:0pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Equipment Management module incorporates several key features to fulfill its objectives effectively:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Asset Registry</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Maintain a comprehensive registry of all equipment, including specifications, purchase details, and maintenance records.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Maintenance Scheduler</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Enable users to schedule routine maintenance tasks, set reminders, and log completed maintenance activities.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Utilization Analytics</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Generate reports and analytics on equipment utilization, helping management make informed decisions about resource allocation.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Cost Tracking</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Track and analyze the costs associated with equipment, allowing for better budgeting and financial planning.</span>
+        <ol start="3" type="1" class="awlist35" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-10.8pt; text-indent:-25.2pt; line-height:110%; font-family:'Cambria Math'; font-size:11pt; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">&#xa0;</span><span style="font-family:Constantia">Workflow</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:0pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The workflow within the Equipment Management module is designed to be intuitive and efficient:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Asset Registration</span></strong><span style="font-family:Constantia">: Users can input details about each piece of equipment, including specifications, purchase date, and initial cost.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Maintenance Scheduling</span></strong><span style="font-family:Constantia">: Schedule routine maintenance tasks based on equipment usage or predefined timelines.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Utilization Monitoring</span></strong><span style="font-family:Constantia">: Regularly analyze utilization reports to identify underutilized or overutilized equipment.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Cost Management</span></strong><span style="font-family:Constantia">: Track and manage costs associated with equipment, including maintenance expenses and depreciation.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Reporting and Analytics</span></strong><span style="font-family:Constantia">: Generate customized reports and analytics to gain insights into equipment performance and make data-driven decisions.</span>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-bottom:10pt">
+      <span style="color:#262626">&#xa0;</span>
+    </p>
+    <ol start="4" type="1" class="awlist36" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:39.6pt; margin-bottom:10pt; text-indent:-21.6pt; font-family:'Cambria Math'; font-weight:bold; color:#262626">
+        <span style="width:4.91pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0; </span><span style="font-family:Constantia">Document Control</span>
+        <ol type="1" class="awlist30" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:21.6pt; margin-bottom:10pt; text-indent:-25.2pt">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Objectives and Functions</span>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p style="margin-top:6pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Document Control module in OPS is dedicated to efficiently managing and controlling documents within the organization. The key objectives and functions include:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Document Repository</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Establish a centralized repository for storing and organizing all types of documents, ensuring easy access and retrieval.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Version Control</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Implement a versioning system to track changes, updates, and revisions made to documents over time.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Access Control</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Define and enforce access controls to ensure that only authorized personnel can view, edit, or approve documents.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Workflow Automation</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Streamline document approval processes and workflows to enhance efficiency and reduce manual interventions.</span>
+        <ol start="2" type="1" class="awlist37" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-10.8pt; text-indent:-25.2pt; line-height:110%; font-family:'Cambria Math'; font-size:11pt; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">&#xa0;</span><span style="font-family:Constantia">Key Features</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:0pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The Document Control module incorporates essential features to meet its objectives effectively:</span>
+    </p>
+    <ul type="disc" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Centralized Repository</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: A secure and organized repository for storing documents of various formats, such as text files, spreadsheets, and images.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Versioning System</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Track changes and maintain a history of document revisions, allowing users to revert to previous versions if necessary.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Access Permissions</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Set granular access controls to regulate who can view, edit, and approve documents, ensuring data security.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:63.6pt; margin-bottom:10pt; line-height:110%; padding-left:8.4pt; font-family:serif; font-size:10pt; color:#262626">
+        <strong><span style="line-height:110%; font-family:Constantia; font-size:11pt; ">Workflow Automation Tools</span></strong><span style="line-height:110%; font-family:Constantia; font-size:11pt">: Automate document approval processes, notifications, and task assignments to streamline collaboration and reduce delays.</span>
+        <ol start="3" type="1" class="awlist38" style="margin-right:0pt; margin-left:0pt; padding-left:0pt">
+          <li style="margin-top:6pt; margin-left:-10.8pt; text-indent:-25.2pt; line-height:110%; font-family:'Cambria Math'; font-size:11pt; font-weight:bold">
+            <span style="width:0.16pt; font:7pt 'Times New Roman'; display:inline-block"> </span><span style="font-family:Constantia">Workflow</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p style="margin-top:0pt; margin-left:61.2pt; margin-bottom:10pt">
+      <span style="color:#262626">The workflow within the Document Control module is designed to enhance document management efficiency:</span>
+    </p>
+    <ol type="1" style="margin:0pt; padding-left:0pt">
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Document Upload</span></strong><span style="font-family:Constantia">: Users can upload documents to the centralized repository, providing necessary metadata and tagging for easy identification.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Version Control</span></strong><span style="font-family:Constantia">: As documents undergo revisions, the system automatically manages versioning, allowing users to track changes over time.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Access Permissions</span></strong><span style="font-family:Constantia">: Administrators can define access permissions based on roles, ensuring that sensitive documents are only accessible to authorized personnel.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Workflow Automation</span></strong><span style="font-family:Constantia">: Automate approval processes, notifications, and task assignments, reducing the time and effort required for document reviews and approvals.</span>
+      </li>
+      <li style="margin-top:6pt; margin-left:67.35pt; margin-bottom:10pt; padding-left:4.65pt; font-family:'Cambria Math'; color:#262626">
+        <strong><span style="font-family:Constantia; ">Audit Trail</span></strong><span style="font-family:Constantia">: Maintain a detailed audit trail to track document access, edits, and approvals, ensuring compliance with regulatory requirements.</span>
+      </li>
+    </ol>
+  </div>
+
 <strong>Yet to be written...</strong>
 {% endblock %}

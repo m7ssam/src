@@ -10,6 +10,9 @@ def home(request):
 def documentation(request):
   return render(request, 'home/documentation.html')
 
+def documentation_ar(request):
+  return render(request, 'home/documentation_ar.html')
+
 
 
 def underconstruction(request):
