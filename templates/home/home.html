@@ -1,20 +1,97 @@
-{% extends "index.html" %}
-{% load static %}
-{% block content %}
-<div class=" container d-flex card mt-4 p-4 br">
-    <div>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Disclaimer: System Under Development!</strong> <br> This system is currently in the development phase and is not intended for use in any live or critical work environments. It is provided solely for testing, evaluation, and feedback purposes. Any data entered into or processed by this system may be subject to loss, errors, or other unpredictable outcomes.
-            <br>
-            <strong>The Admin</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
+{% extends "index.html" %} {% load static %} {% block content %}
+<div class="container d-flex card mt-4 p-4 br">
+  <h1>PetroJet Eastern branch</h1>
+  <div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Disclaimer: System Under Development!</strong> <br />
+      This system is currently in the development phase and is not intended for
+      use in any live or critical work environments. It is provided solely for
+      testing, evaluation, and feedback purposes. Any data entered into or
+      processed by this system may be subject to loss, errors, or other
+      unpredictable outcomes.
+      <h5 dir="rtl" class="m-0">
+        <strong>النظام قيد التطوير!</strong> <br />
+        هذا النظام حاليًا في مرحلة التطوير وليس مخصصًا للاستخدام في أي بيئات عمل
+        حية أو حرجة. يتم توفيره فقط لأغراض الاختبار والتقييم والتعليقات. قد تكون
+        أي بيانات يتم إدخالها أو معالجتها بواسطة هذا النظام عرضة للفقدان أو
+        الأخطاء أو غيرها من النتائج غير المتوقعة.
+      </h5>
+      <br />
+      <strong>M. Hossam</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
     </div>
-    <h1>PetroJet Eastern branch</h1>
-    <div class="text-center" ><img style="width: 350px;" src="{% static 'images\main\planning.webp' %}" alt=""></div>
-    <div>
-        <a class="btn btn-primary" href="{% url 'documentation' %}"> Documentation </a>
+  </div>
+  <div class="text-center">
+    <img
+      style="width: 350px"
+      src="{% static 'images\main\planning.webp' %}"
+      alt=""
+    />
+  </div>
+  <!-- ------------ -->
+  <div class="row justify-content-evenly">
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">التقارير</h3>
+        </div>
+        <a href="{% url  'report_home' %}" class="btn btn-primary"
+          >Report Module</a
+        >
+      </div>
     </div>
+
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">التخطيط</h3>
+        </div>
+        <a href="{% url  'project_home' %}" class="btn btn-primary"
+          >Planning</a
+        >
+      </div>
+    </div>
+
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">المعدات</h3>
+        </div>
+        <a href="{% url  'eqp_home' %}" class="btn btn-primary"
+          >Equipments</a
+        >
+      </div>
+    </div>
+
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">العمالة</h3>
+        </div>
+        <a href="{% url  'mp_home' %}" class="btn btn-primary"
+          >ManPower</a
+        >
+      </div>
+    </div>
+
+    <div class="card text-center br m-2" style="width: 18rem">
+      <div class="card-body">
+        <div dir="rtl" class="">
+          <h3 class="card-title">ملفات النظام</h3>
+        </div>
+        <a href="{% url  'documentation' %}" class="btn btn-primary"
+          >Documentation</a
+        >
+      </div>
+    </div>
+
+  </div>
+  <!-- --------------- -->
 </div>
 
-{% endblock  %}
+{% endblock %}
