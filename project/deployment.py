@@ -6,7 +6,7 @@ from .settings import BASE_DIR
 SECRET_KEY = os.environ['SECRET']
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'], "ptj-ops.azurewebsites.net", "20.87.80.68"]
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
-DEBUG = False
+DEBUG = True
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
